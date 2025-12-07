@@ -50,7 +50,7 @@ def showbyday(
 ):
     """Display merged health data in a day-by-day tabular format."""
     merged = load_and_merge_data(sleep_json_file, workouts_json_file, local_time_zone)
-    print(tabulate(merged, headers="firstrow", tablefmt="grid"))
+    print(tabulate(merged, headers="keys", tablefmt="grid"))
 
 
 @app.command()
@@ -62,7 +62,8 @@ def showSummary(
     """Display summary statistics and correlations between sleep and activity."""
     merged = load_and_merge_data(sleep_json_file, workouts_json_file, local_time_zone)
     results = calculate_correlations(merged)
-    print(results)
+    table_data = list(results.items())
+    print(tabulate(table_data, headers=["Metric", "Value"], tablefmt="grid"))
 
 
 if __name__ == '__main__':
