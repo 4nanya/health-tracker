@@ -26,7 +26,7 @@ def merge_datasets(sleep_data, workout_data):
     for date_str in sorted(all_dates):
         daily = {'date': date_str}
         
-        # Add sleep data
+        # Add sleep data; assume one sleep per day
         if date_str in sleep_by_date:
             sleep = sleep_by_date[date_str]
             daily['sleep_hours'] = sleep.get('hours')
@@ -38,7 +38,7 @@ def merge_datasets(sleep_data, workout_data):
         # Add workout data
         if date_str in workouts_by_date:
             workouts = workouts_by_date[date_str]
-           # daily['workouts'] = workouts
+           # Assume multiple workout per day and sum up the calories and the duration.
             daily['total_calories'] = sum(w.get('calories', 0) for w in workouts)
             daily['workout_count'] = len(workouts)
             daily['workout_time'] = sum(w.get('duration', 0) for w in workouts)
