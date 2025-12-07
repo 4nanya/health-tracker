@@ -32,14 +32,6 @@ def load_and_merge_data(
 ) -> list:
     """
     Load, normalize, and merge health data from JSON files.
-    
-    Args:
-        sleep_json_file: Path to sleep data JSON file
-        workouts_json_file: Path to workout data JSON file
-        local_time_zone: IANA timezone for workout data (e.g., 'America/Los_Angeles')
-        
-    Returns:
-        Merged dataset with daily health metrics
     """
     sleep = load_json_data(sleep_json_file)
     workouts = load_json_data(workouts_json_file)
@@ -62,7 +54,7 @@ def showbyday(
 
 
 @app.command()
-def show_summary(
+def showSummary(
     sleep_json_file: SleepFile = "data/sleep.json",
     workouts_json_file: WorkoutsFile = "data/workouts.json",
     local_time_zone: LocalTimeZone = "America/Los_Angeles",
