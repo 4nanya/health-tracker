@@ -14,12 +14,12 @@
 ---
 ### Methodology & AI Usage Disclosure
 ### AI Tools Used
-I used Claude.ai to help with initial code architecture and understanding timezone edge cases
+I used Claude.ai to help with initial code architecture and understanding timezone edge cases. I also used Claude.ai to generate first test case.
 ### How I Validated AI Output
 1. **Manual Code Review**: I read through every line of AI-generated code to understand what it does, tweaking as I saw fit to match my vision
 2. **Edge Case Testing**: I created test data with the 11 PM workout scenario to verify day boundary logic works correctly
 3. **Output Verification**: I initially manually calculated what the expected results were going to be and then I and compared against actual output to ensure that I was on right track
-4. **Test Verification**: I then created test cases for various scenarios and uses them to test functionality and the changes
+4. **Test Cases**: I then created test cases for various scenarios and uses them to test functionality and the changes
 ---
 
 ### Key Considerations
