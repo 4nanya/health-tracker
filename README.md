@@ -24,11 +24,11 @@ I used Claude.ai to help with initial code architecture and understanding timezo
 
 ### Key Considerations
 
+### Why dateutil for parsing?
+The challenge requires handling messy date formats. `dateutil.parser.parse()` automatically detects and parses any date string format without manually specifying patterns. This makes the code resilient to variations to the format. The standard library methods like datetime.strptime() and datetime.fromisoformat() are not able to handle fuzzy or ambiguous parsing.
+
 ### Why pytz instead of manual timezone math?
 Manual timezone calculations can be really prone to errors which is what I wanted to avoid. This includes things like Daylight saving time transitions depending on what day in the year the workout/sleep fell on and historical timezone changes, and anticipating future potential changes to time-zoning. pytz is really good at simply handling all these edge cases automatically.
-### Why dateutil for parsing?
-The challenge requires handling messy date formats. `dateutil.parser.parse()` automatically detects and parses any date string format without manually specifying patterns. This makes the code resilient to variations to the format.
-
 
 ---
 
@@ -39,7 +39,7 @@ The challenge requires handling messy date formats. `dateutil.parser.parse()` au
 
 **How I approached this**
 
-I decided to use the local timezone that the original datetime was recorded in to classify the date, so in the example above, although it would be logged as 7 AM UTC, it would be classified under Tuesday, as this is more understandable to the user. 
+I decided to use the local timezone that the user provided as input to classify the date, so in the example above, although it would be logged as 7 AM UTC, it would be classified under Tuesday, as this is more understandable to the user. 
 ```python
 # In normalizer.py
 dt_local = tz.localize(dt)  # Keep in original timezone
@@ -76,10 +76,10 @@ else:
 
 1. In terminal, run "pip3 install -r requirements.txt" 
 2. If you then type "python3 -m cli --help" you will be able to see the different commands you can run on the command line interface
-3. showbyday: This returns the whole merged dataset
-4. showsummary: This command will show you the data analysis done on the merged dataset
+    - showbyday: This returns the whole merged dataset
+    - showsummary: This command will show you the data analysis done on the merged dataset
 
 ---
 
 ### What I Learned
-I learned how to execute a whole case study in a short amount of time, and how to work with cli. 
+I learned how to execute a whole case study in a short amount of time. I also learned details about modules such as ```pythondateutil.parser, pytz``` and working with CLI. 
