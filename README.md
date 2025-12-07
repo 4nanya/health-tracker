@@ -3,7 +3,7 @@
 
 **Palo Alto Networks Intern Challenge - Option 3** 
 ---
-For my case study, I chose Option 3: Personal Health Data Aggregator. This project takes 2 distinct datasets whose data doesn't necessarily match. It merges them into 1 dataset on their date -- after making them both UTC. Further analysis of the data can then be done to learn more about how someone sleeps/works out.
+### For my case study, I chose Option 3: Personal Health Data Aggregator. This project takes 2 distinct datasets whose data doesn't necessarily match. It merges them into 1 dataset on their date -- after making them both UTC. Further analysis of the data can then be done to learn more about how someone sleeps/works out.
 ---
 ### Challenge Requirements Met
 - [x] **Data Simulation:** I generated 2 json files: workouts.json and sleep.json. They both have different attributes (eg the logged date being under "date" vs "timestamp"), different formatting for the date itself (eg "2023-10-01 14:00:00 PST" vs "2023-10-01T06:00:00Z"), along with their own unique attributes that described the activity (eg "calories" for workouts vs "quality" for sleep)
@@ -22,7 +22,7 @@ I used Claude.ai to help with initial code architecture and understanding timezo
 
 ---
 
-### Architecture
+### Key Considerations
 
 ### Why pytz instead of manual timezone math?
 Manual timezone calculations can be really prone to errors which is what I wanted to avoid. This includes things like Daylight saving time transitions depending on what day in the year the workout/sleep fell on and historical timezone changes, and anticipating future potential changes to time-zoning. pytz is really good at simply handling all these edge cases automatically.
