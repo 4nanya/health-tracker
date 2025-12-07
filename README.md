@@ -14,6 +14,21 @@
 - [x] **Correlation Logic:** In analyzer.py, I use aggregate functions to figure out average calories on high and low sleep days, simply by iterating through the values in the merged dataset.
 
 ---
+## How to Run!
+
+1. In terminal, run `pip3 install -r requirements.txt`
+2. If you then type `python3 -m cli --help` you will be able to see the different commands you can run on the command line interface
+    - **showbyday**: This returns the whole merged dataset:
+    ```python -m cli showbyday ```
+    - **showsummary**: This command will show you the data analysis done on the merged dataset:
+    ```python -m cli showsummary```
+3. Running tests: `pytest test_health_tracker.py -v`
+4. You can provide different timezone and json data in the CLI
+```
+python -m cli showsummary --sleep-json-file data/sleep1month.json --workouts-json-file data/workouts1month.json --local-time-zone=America/New_York
+```
+
+---
 ### Methodology & AI Usage Disclosure
 ### AI Tools Used
 I used Claude.ai to help with initial code architecture and understanding timezone edge cases. I also used Claude.ai to generate first the test case but wrote the rest myself.
@@ -32,6 +47,9 @@ The challenge requires handling messy date formats. `dateutil.parser.parse()` au
 
 ### Why pytz instead of manual timezone math?
 Manual timezone calculations can be really prone to errors which is what I wanted to avoid. This includes things like Daylight saving time transitions depending on what day in the year the workout/sleep fell on and historical timezone changes, and anticipating future potential changes to time-zoning. **pytz** is really good at simply handling all these edge cases automatically.
+
+### Handling Days with no Workout
+When calculating "average calories on low sleep days," I only include days where the user both slept AND worked out. This means that days where a user logged sleep but didn't log a workout aren't included in the average analysis. This provides a cleaner correlation between sleep quality and workout intensity.
 
 ---
 
@@ -143,15 +161,6 @@ I created a comprehensive test suite with 28 test cases covering every major fun
 - Handling incomplete data
 - Handling completely empty data
 
-
----
-## How to Run!
-
-1. In terminal, run `pip3 install -r requirements.txt`
-2. If you then type `python3 -m cli --help` you will be able to see the different commands you can run on the command line interface
-    - **showbyday**: This returns the whole merged dataset
-    - **showsummary**: This command will show you the data analysis done on the merged dataset
-3. Running tests: `pytest test_health_tracker.py -v`
 
 ---
 

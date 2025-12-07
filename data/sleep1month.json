@@ -1,0 +1,148 @@
+[
+  {
+    "date": "2023-10-01T06:00:00Z",
+    "hours": 7.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-02T05:30:00Z",
+    "hours": 5.5,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-03T07:00:00Z",
+    "hours": 8.0,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-04T06:15:00Z",
+    "hours": 6.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-05T08:30:00Z",
+    "hours": 5.0,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-06T07:45:00Z",
+    "hours": 7.0,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-07T06:00:00Z",
+    "hours": 8.5,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-08T09:00:00Z",
+    "hours": 6.0,
+    "quality": "fair"
+  },
+  {
+    "date": "2023-10-09T05:00:00Z",
+    "hours": 4.5,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-10T06:30:00Z",
+    "hours": 7.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-12T07:00:00Z",
+    "hours": 8.0,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-13T06:00:00Z",
+    "hours": 5.5,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-14T08:00:00Z",
+    "hours": 9.0,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-15T05:30:00Z",
+    "hours": 5.0,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-16T06:45:00Z",
+    "hours": 7.0,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-17T07:15:00Z",
+    "hours": 6.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-18T06:00:00Z",
+    "hours": 8.0,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-19T08:30:00Z",
+    "hours": 4.0,
+    "quality": "very poor"
+  },
+  {
+    "date": "2023-10-20T05:45:00Z",
+    "hours": 5.5,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-21T07:00:00Z",
+    "hours": 7.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-22T06:30:00Z",
+    "hours": 8.5,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-24T06:00:00Z",
+    "hours": 6.0,
+    "quality": "fair"
+  },
+  {
+    "date": "2023-10-25T07:30:00Z",
+    "hours": 7.0,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-26T05:00:00Z",
+    "hours": 5.0,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-27T06:15:00Z",
+    "hours": 6.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-28T08:00:00Z",
+    "hours": 8.0,
+    "quality": "excellent"
+  },
+  {
+    "date": "2023-10-29T05:30:00Z",
+    "hours": 4.5,
+    "quality": "poor"
+  },
+  {
+    "date": "2023-10-30T07:00:00Z",
+    "hours": 7.5,
+    "quality": "good"
+  },
+  {
+    "date": "2023-10-31T06:00:00Z",
+    "hours": 6.5,
+    "quality": "good"
+  }
+]
+

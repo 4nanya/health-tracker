@@ -91,7 +91,7 @@ def test_day_boundary_edge_case_different_date_format_4():
     # But local_date should still be Dec 7 (the day user worked out)
     assert normalized[0]['local_date'] == date(2025, 12, 7)
 
-def test_day_boundary_edge_case_different_date_format_4():
+def test_day_boundary_edge_case_different_date_format_5():
     # A workout at 11 PM PST on Dec 7
     data = [
         {"timestamp": "12/7/2025 11pm PST", "type": "gym", "calories": 250}
@@ -147,13 +147,13 @@ def test_normal_sleep():
     
     results = calculate_correlations(merged_data)
     
-    # Should have 2 low sleep days
+    # Should have 1 normal sleep day
     assert results['normal_sleep_day_count'] == 1
-    # Should average 300 and 350 = 325
+    # Should just show the one day
     assert results['avg_calories_on_normal_sleep_days'] == '400.00 calories'
 
 
-def test_no_low_sleep():
+def test_no_normal_sleep():
     merged_data = [
         {'date': '2023-10-01', 'sleep_hours': 5.0, 'total_calories': 300, 'workout_count': 1},
         {'date': '2023-10-02', 'sleep_hours': 5.0, 'total_calories': 350, 'workout_count': 1}
