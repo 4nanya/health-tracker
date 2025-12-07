@@ -3,7 +3,9 @@
 
 **Palo Alto Networks Intern Challenge - Option 3** 
 ---
-### For my case study, I chose Option 3: Personal Health Data Aggregator. This project takes 2 distinct datasets whose data doesn't necessarily match. It merges them into 1 dataset on their date -- after making them both UTC. Further analysis of the data can then be done to learn more about how someone sleeps/works out.
+### For my case study, I chose Option 3: Personal Health Data Aggregator ❤️‍🩹
+### Since Health data is notoriously fragmented, to provide a holistic view to the user, I built a service to harmonize a user's sleep tracker data recorded in UTC and the user’s workout app logs data recorded in their local time.
+### My project merges two datasets from disparate data sources: sleep and workouts that don't perfectly align due to different date formats and aligns/harmonizes the dates in UTC, but classifies them according to their local time. Further analysis of the data can then be done then to learn more about how the user’s sleeping and workout habits.
 ---
 ### Challenge Requirements Met
 - [x] **Data Simulation:** I generated 2 json files: workouts.json and sleep.json. They both have different attributes (eg the logged date being under "date" vs "timestamp"), different formatting for the date itself (eg "2023-10-01 14:00:00 PST" vs "2023-10-01T06:00:00Z"), along with their own unique attributes that described the activity (eg "calories" for workouts vs "quality" for sleep)
@@ -26,7 +28,7 @@ I used Claude.ai to help with initial code architecture and understanding timezo
 ### Key Considerations
 
 ### Why dateutil for parsing?
-The challenge requires handling messy date formats. `dateutil.parser.parse()` automatically detects and parses any date string format without manually specifying patterns. This makes the code resilient to variations to the format. The standard Python library methods like datetime.strptime() and datetime.fromisoformat() are not able to handle fuzzy or ambiguous parsing.
+The challenge requires handling messy date formats. `dateutil.parser.parse()` automatically detects and parses any date string format without manually specifying patterns. This makes the code resilient to variations to the format. The standard Python library methods like datetime.strptime() and datetime.fromisoformat() are not able to handle fuzzy or ambiguous parsing like “december 20, 2023”.
 
 ### Why pytz instead of manual timezone math?
 Manual timezone calculations can be really prone to errors which is what I wanted to avoid. This includes things like Daylight saving time transitions depending on what day in the year the workout/sleep fell on and historical timezone changes, and anticipating future potential changes to time-zoning. **pytz** is really good at simply handling all these edge cases automatically.
