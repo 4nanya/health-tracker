@@ -4,8 +4,8 @@
 **Palo Alto Networks Intern Challenge - Option 3** 
 ---
 ### For my case study, I chose Option 3: Personal Health Data Aggregator ❤️‍🩹
-### Since Health data is notoriously fragmented, to provide a holistic view to the user, I built a service to harmonize a user's sleep tracker data recorded in UTC and the user’s workout app logs data recorded in their local time.
-### My project merges two datasets from disparate data sources: sleep and workouts that don't perfectly align due to different date formats and aligns/harmonizes the dates in UTC, but classifies them according to their local time. Further analysis of the data can then be done then to learn more about how the user’s sleeping and workout habits.
+#### Since Health data is notoriously fragmented, to provide a holistic view to the user, I built a service to harmonize a user's sleep tracker data recorded in UTC and the user’s workout app logs data recorded in their local time.
+#### My project merges two datasets from disparate data sources: sleep and workouts that don't perfectly align due to different date formats and aligns/harmonizes the dates in UTC, but classifies them according to their local time. Further analysis of the data can then be done then to learn more about how the user’s sleeping and workout habits.
 ---
 ### Challenge Requirements Met
 - [x] **Data Simulation:** I generated 2 json files: workouts.json and sleep.json. They both have different attributes (eg the logged date being under "date" vs "timestamp"), different formatting for the date itself (eg "2023-10-01 14:00:00 PST" vs "2023-10-01T06:00:00Z"), along with their own unique attributes that described the activity (eg "calories" for workouts vs "quality" for sleep)
