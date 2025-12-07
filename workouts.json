@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2023-10-01 14:00:00 PST",
+    "type": "run",
+    "calories": 300,
+    "duration": 30
+  },
+  {
+    "timestamp": "2023-10-01 23:00:00 PST",
+    "type": "gym",
+    "calories": 250,
+    "duration": 60
+  },
+  {
+    "timestamp": "2023-10-02 23:00:00 PST",
+    "type": "yoga",
+    "calories": 150,
+    "duration": 10
+  }
+]
