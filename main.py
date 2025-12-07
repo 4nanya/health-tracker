@@ -3,7 +3,7 @@ from loader import load_json_data
 from merger import merge_datasets
 from normalizer import normalize_to_utc
 from tabulate import tabulate
-from .cli import app
+from cli import app
 # sleep = load_json_data('sleep.json')
 # workouts = load_json_data('workouts.json')
 
@@ -18,5 +18,5 @@ from .cli import app
 # #print(merged)
 # print(results)
 
-# if __name__ == "__main__":
-#     app()
+if __name__ == "__main__":
+    app()
