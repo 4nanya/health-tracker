@@ -1,0 +1,248 @@
+[
+  {
+    "timestamp": "2023-09-30 23:00:00 PST",
+    "type": "run",
+    "calories": 350,
+    "duration": 45,
+    "comment": "EDGE CASE: Late night workout crosses to Oct 1 in UTC"
+  },
+  {
+    "timestamp": "2023-10-01 14:00:00 PST",
+    "type": "gym",
+    "calories": 300,
+    "duration": 60
+  },
+  {
+    "timestamp": "2023-10-01 18:30:00 PST",
+    "type": "swim",
+    "calories": 200,
+    "duration": 30,
+    "comment": "EDGE CASE: Multiple workouts same day"
+  },
+  {
+    "timestamp": "2023-10-02 23:00:00 PST",
+    "type": "yoga",
+    "calories": 150,
+    "duration": 45,
+    "comment": "EDGE CASE: 11 PM workout crosses to Oct 3 in UTC"
+  },
+  {
+    "timestamp": "2023-10-03 06:00:00 PST",
+    "type": "run",
+    "calories": 400,
+    "duration": 50
+  },
+  {
+    "timestamp": "2023-10-04 15:00:00 PST",
+    "type": "cycling",
+    "calories": 450,
+    "duration": 60
+  },
+  {
+    "timestamp": "2023-10-05 07:30:00 PST",
+    "type": "gym",
+    "calories": 350,
+    "duration": 55
+  },
+  {
+    "timestamp": "2023-10-06 17:00:00 PST",
+    "type": "run",
+    "calories": 300,
+    "duration": 40
+  },
+  {
+    "timestamp": "2023-10-06 20:00:00 PST",
+    "type": "yoga",
+    "calories": 120,
+    "duration": 30,
+    "comment": "EDGE CASE: Second workout on same day"
+  },
+  {
+    "timestamp": "2023-10-07 23:45:00 PST",
+    "type": "gym",
+    "calories": 380,
+    "duration": 65,
+    "comment": "EDGE CASE: Very late night workout (11:45 PM)"
+  },
+  {
+    "timestamp": "2023-10-08 08:00:00 PST",
+    "type": "swim",
+    "calories": 250,
+    "duration": 35
+  },
+  {
+    "timestamp": "2023-10-09 16:30:00 PST",
+    "type": "run",
+    "calories": 320,
+    "duration": 42
+  },
+  {
+    "timestamp": "2023-10-11 10:00:00 PST",
+    "type": "hiking",
+    "calories": 500,
+    "duration": 120,
+    "comment": "EDGE CASE: Day with workout but no sleep data"
+  },
+  {
+    "timestamp": "2023-10-12 14:00:00 PST",
+    "type": "gym",
+    "calories": 340,
+    "duration": 50
+  },
+  {
+    "timestamp": "2023-10-12 19:00:00 PST",
+    "type": "yoga",
+    "calories": 130,
+    "duration": 35,
+    "comment": "EDGE CASE: Multiple workouts"
+  },
+  {
+    "timestamp": "2023-10-13 23:30:00 PST",
+    "type": "run",
+    "calories": 360,
+    "duration": 48,
+    "comment": "EDGE CASE: 11:30 PM workout"
+  },
+  {
+    "timestamp": "2023-10-14 07:00:00 PST",
+    "type": "cycling",
+    "calories": 420,
+    "duration": 55
+  },
+  {
+    "timestamp": "2023-10-15 15:30:00 PST",
+    "type": "gym",
+    "calories": 310,
+    "duration": 45
+  },
+  {
+    "timestamp": "2023-10-16 08:30:00 PST",
+    "type": "run",
+    "calories": 330,
+    "duration": 43
+  },
+  {
+    "timestamp": "2023-10-16 17:00:00 PST",
+    "type": "swim",
+    "calories": 240,
+    "duration": 32,
+    "comment": "EDGE CASE: Second workout"
+  },
+  {
+    "timestamp": "2023-10-16 21:00:00 PST",
+    "type": "yoga",
+    "calories": 110,
+    "duration": 25,
+    "comment": "EDGE CASE: Third workout on same day"
+  },
+  {
+    "timestamp": "2023-10-17 11:00:00 PST",
+    "type": "hiking",
+    "calories": 480,
+    "duration": 110
+  },
+  {
+    "timestamp": "2023-10-18 23:15:00 PST",
+    "type": "gym",
+    "calories": 370,
+    "duration": 58,
+    "comment": "EDGE CASE: Late night workout"
+  },
+  {
+    "timestamp": "2023-10-19 06:00:00 PST",
+    "type": "run",
+    "calories": 390,
+    "duration": 52
+  },
+  {
+    "timestamp": "2023-10-20 16:00:00 PST",
+    "type": "cycling",
+    "calories": 440,
+    "duration": 60
+  },
+  {
+    "timestamp": "2023-10-21 09:00:00 PST",
+    "type": "swim",
+    "calories": 260,
+    "duration": 38
+  },
+  {
+    "timestamp": "2023-10-21 18:30:00 PST",
+    "type": "yoga",
+    "calories": 125,
+    "duration": 30,
+    "comment": "EDGE CASE: Second workout"
+  },
+  {
+    "timestamp": "2023-10-23 10:00:00 PST",
+    "type": "run",
+    "calories": 350,
+    "duration": 46,
+    "comment": "EDGE CASE: Workout but no sleep data"
+  },
+  {
+    "timestamp": "2023-10-24 15:00:00 PST",
+    "type": "gym",
+    "calories": 320,
+    "duration": 47
+  },
+  {
+    "timestamp": "2023-10-25 07:30:00 PST",
+    "type": "cycling",
+    "calories": 410,
+    "duration": 56
+  },
+  {
+    "timestamp": "2023-10-26 23:59:00 PST",
+    "type": "run",
+    "calories": 340,
+    "duration": 44,
+    "comment": "EDGE CASE: 11:59 PM workout - right at midnight boundary"
+  },
+  {
+    "timestamp": "2023-10-27 12:00:00 PST",
+    "type": "swim",
+    "calories": 270,
+    "duration": 40
+  },
+  {
+    "timestamp": "2023-10-28 17:30:00 PST",
+    "type": "gym",
+    "calories": 360,
+    "duration": 52
+  },
+  {
+    "timestamp": "2023-10-28 20:00:00 PST",
+    "type": "yoga",
+    "calories": 115,
+    "duration": 28,
+    "comment": "EDGE CASE: Second workout"
+  },
+  {
+    "timestamp": "2023-10-29 23:00:00 PST",
+    "type": "run",
+    "calories": 380,
+    "duration": 50,
+    "comment": "EDGE CASE: 11 PM workout"
+  },
+  {
+    "timestamp": "2023-10-30 08:00:00 PST",
+    "type": "cycling",
+    "calories": 430,
+    "duration": 58
+  },
+  {
+    "timestamp": "2023-10-31 14:00:00 PST",
+    "type": "gym",
+    "calories": 350,
+    "duration": 48
+  },
+  {
+    "timestamp": "2023-10-31 23:30:00 PST",
+    "type": "run",
+    "calories": 300,
+    "duration": 42,
+    "comment": "EDGE CASE: Halloween late night workout crosses to Nov 1 in UTC"
+  }
+]
+
