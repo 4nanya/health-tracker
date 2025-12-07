@@ -15,6 +15,7 @@
 ### Methodology & AI Usage Disclosure
 ### AI Tools Used
 I used Claude.ai to help with initial code architecture and understanding timezone edge cases. I also used Claude.ai to generate first the test case but wrote the rest myself.
+
 ### How I Validated AI Output
 1. **Manual Code Review**: I read through every line of AI-generated code to understand what it does, tweaking as I saw fit to match my vision
 2. **Edge Case Testing**: I created test data with the 11 PM workout scenario to verify day boundary logic works correctly
@@ -25,10 +26,10 @@ I used Claude.ai to help with initial code architecture and understanding timezo
 ### Key Considerations
 
 ### Why dateutil for parsing?
-The challenge requires handling messy date formats. `dateutil.parser.parse()` automatically detects and parses any date string format without manually specifying patterns. This makes the code resilient to variations to the format. The standard library methods like datetime.strptime() and datetime.fromisoformat() are not able to handle fuzzy or ambiguous parsing.
+The challenge requires handling messy date formats. `dateutil.parser.parse()` automatically detects and parses any date string format without manually specifying patterns. This makes the code resilient to variations to the format. The standard Python library methods like datetime.strptime() and datetime.fromisoformat() are not able to handle fuzzy or ambiguous parsing.
 
 ### Why pytz instead of manual timezone math?
-Manual timezone calculations can be really prone to errors which is what I wanted to avoid. This includes things like Daylight saving time transitions depending on what day in the year the workout/sleep fell on and historical timezone changes, and anticipating future potential changes to time-zoning. pytz is really good at simply handling all these edge cases automatically.
+Manual timezone calculations can be really prone to errors which is what I wanted to avoid. This includes things like Daylight saving time transitions depending on what day in the year the workout/sleep fell on and historical timezone changes, and anticipating future potential changes to time-zoning. **pytz** is really good at simply handling all these edge cases automatically.
 
 ---
 
@@ -64,7 +65,7 @@ Some days have 2+ workouts. The merger correctly:
 - Counts all workouts
 - Sums total calories
 - Sums total duration
-I decided to only show the aggregated results on the days with several workouts instead of displaying every workout that occured that day for a cleaner merged dataset.
+I decided to only show the aggregated results on the days with several workouts instead of displaying every workout that occurred that day for a cleaner merged dataset.
 
 **Test Cases:**
 - `test_merge_multiple_workouts_same_day()` 
